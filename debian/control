@@ -1,0 +1,15 @@
+Source: flvtool2
+Section: utils
+Priority: extra
+Maintainer: Todd Troxell <ttroxell@debian.org>
+Build-Depends: debhelper (>= 5), ruby1.8
+Standards-Version: 3.7.2
+XS-Vcs-Hg: http://code.rapidpacket.com/flvtool2/
+
+Package: flvtool2
+Architecture: any
+Depends: ruby1.8
+Description: a manipulation tool for flash video files
+ flvtool2 can display and modify various metadata on flash video files
+ It can also add cue points, cut, and debug flv files.  It can output
+ metadata in XML and YAML formats.

@@ -1,0 +1,107 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH FLVTOOL2 1 "August 24, 2007"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+flvtool2 \- a manipulation tool for flash video files
+.SH SYNOPSIS
+.B flvtool2
+.RI [-ACDPUVaciklnoprstvx]... [-key:value]... in-path|stdin [out-path|stdout]
+.br
+.SH DESCRIPTION
+If out-path is omitted, in-path will be overwritten.
+In-path can be a single file, or a directory. If in-path is a directory,
+out-path has to be likewise, or can be omitted. Directory recursion
+is controlled by the -r switch. You can use stdin and stdout keywords
+as in- and out-path for piping or redirecting.
+
+Chain commands like that: -UP (updates FLV file than prints out meta data)
+.PP
+.\" TeX users may be more comfortable with the \fB<whatever>\fP and
+.\" \fI<whatever>\fP escape sequences to invode bold face and italics, 
+.\" respectively.
+.SH COMMANDS
+.TP
+.B \-A
+Adds tags from -t tags-file
+.TP
+.B \-C
+Cuts file using -i inpoint and -o outpoint
+.TP
+.B \-D
+Debugs file (writes a lot to stdout)
+.TP
+.B \-H
+Helpscreen will be shown
+.TP
+.B \-P
+Prints out meta data to stdout
+.TP
+.B \-U
+Updates FLV with an onMetaTag event
+.SH SWITCHES
+.TP
+.B \-a
+Collapse space between cut regions
+.TP
+.B \-c
+Compatibility mode calculates some onMetaTag values differently
+.TP
+.B \-key:value
+Key-value-pair for onMetaData tag (overwrites generated values)
+.TP
+.B \-i timestamp
+Inpoint for cut command in miliseconds
+.TP
+.B \-k
+Keyframe mode slides onCuePoint(navigation) tags added by the add command to nearest keyframe position
+.TP
+.B \-l
+Logs FLV stream reading to stream.log in current directory
+.TP
+.B \-n
+Number of tag to debug
+.TP
+.B \-o timestamp
+Outpoint for cut command in miliseconds
+.TP
+.B \-p
+Preserve mode only updates FLVs that have not been processed before
+.TP
+.B \-r
+Recursion for directory processing
+.TP
+.B \-s
+Simulation mode never writes FLV data to out-path
+.TP
+.B \-t path
+Tagfile (MetaTags written in XML)
+.TP
+.B \-v
+Verbose mode
+.TP
+.B \-x
+XML mode instead of YAML mode
+.SH SEE ALSO
+.BR /usr/share/doc/flvtool2/examples/tags.xml 
+.TP
+.BR http://www.inlet-media.de/flvtool2
+.br
+.SH AUTHOR
+flvtool2 was written by Norman Timmler <norman.timmler@inlet-media.de>
+.PP
+This manual page was written by Todd Troxell <ttroxell@debian.org>,
+for the Debian project (but may be used by others).

@@ -38,7 +38,7 @@ module FLV
   
   class FLVStream
     
-    attr_accessor :signatur,
+    attr_accessor :signature,
                   :version,
                   :type_flags_audio,
                   :type_flags_video,
@@ -396,7 +396,7 @@ module FLV
           log "File version: #{@version}"
           
           type_flags = @in_stream.read__UI8
-          @type_flags_audio = (type_flags & 4) == 1
+          @type_flags_audio = (type_flags & 4) == 4
           log "File has audio: #{@type_flags_audio}"
           
           @type_flags_video = (type_flags & 1) == 1

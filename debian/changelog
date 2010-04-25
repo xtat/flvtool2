@@ -1,0 +1,31 @@
+flvtool2 (1.0.6-4) unstable; urgency=low
+
+  * Sync with upstream author at http://github.com/unnu/flvtool2
+    commit 8edada9aa36a8138fc5e639e9fa23a3008ffdded
+  * Integrated patch from Nicolas Noirbent <nicolas@noirbent.fr>
+    fixes exception caused by typo (Closes: #578955)  
+  * Integrated patch from Nicolas Noirbent <nicolas@noirbent.fr>
+    fixes bit error leading to incorrect audio data detection
+    (Closes: #578958)
+
+ -- Todd Troxell <ttroxell@debian.org>  Sun, 25 Apr 2010 02:16:44 -0400
+
+flvtool2 (1.0.6-3) unstable; urgency=low
+
+  * Add watch file.
+  * Add Vcs-Hg header.
+
+ -- Todd Troxell <ttroxell@debian.org>  Sun, 03 Feb 2008 01:50:19 -0500
+
+flvtool2 (1.0.6-2) unstable; urgency=low
+
+  * Chnage 'ruby' to /usr/bin/ruby1.8 in debian/rules (Closes: #442232)
+
+ -- Todd Troxell <ttroxell@debian.org>  Fri, 14 Sep 2007 10:58:39 -0400
+
+flvtool2 (1.0.6-1) unstable; urgency=low
+
+  * Initial release (Closes: #439332)
+
+ -- Todd Troxell <ttroxell@debian.org>  Fri, 24 Aug 2007 05:22:47 -0400
+
